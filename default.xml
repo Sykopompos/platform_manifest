@@ -14,10 +14,7 @@
   <remote  name="linaro"
 	   fetch="https://github.com/ArchiDroid" 
 	   sync-j="4" />
-  <remote  name="superuser"
-	   fetch="https://github.com" 
-	   sync-j="4" />
-  
+
   <project path="build" name="platform_build" groups="pdk,tradefed" remote="github" revision="frankie-r6" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
@@ -521,7 +518,5 @@
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
   <project path="vendor" name="proprietary_vendor" remote="github" revision="lollipop"/>
   <project path="vendor/frank" name="vendor_frank" remote="github" revision="frankie-r6"/>
-  <project name="koush/Superuser" path="external/koush/Superuser" remote="superuser" revision="master" />
-  <project name="koush/Widgets" path="external/koush/Widgets" remote="superuser" revision="master" />
-  
+
 </manifest>
