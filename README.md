@@ -11,11 +11,17 @@ source build/envsetup.sh
 Pick a device you want to build for
 
 lunch frankened_deb-userdebug
+
 lunch frankened_flo-userdebug
+
 lunch frankened_grouper-userdebug
+
 lunch frankened_hammerhead-userdebug
+
 lunch frankened_mako-userdebug
+
 lunch frankened_manta-userdebug
+
 lunch frankened_shamu-userdebug
 
 then compile
