@@ -2,12 +2,20 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-5.0.1_r1"
            remote="aosp"
-           sync-j="4" />
+           sync-j="6" />
 
-  <project path="build" name="platform/build" groups="pdk,tradefed" >
+  <remote  name="github"
+	   fetch="https://github.com/The-Ancile-Project" 
+	   sync-j="6" />
+  
+  <remote  name="linaro"
+	   fetch="https://github.com/ArchiDroid" 
+	   sync-j="6" />
+
+  <project path="build" name="platform_build" groups="pdk,tradefed" remote="github" revision="frankie-mr-1" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -245,7 +253,7 @@
   <project path="external/robolectric" name="platform/external/robolectric" groups="pdk-cw-fs" />
   <project path="external/safe-iop" name="platform/external/safe-iop" groups="pdk" />
   <project path="external/scrypt" name="platform/external/scrypt" groups="pdk" />
-  <project path="external/sepolicy" name="platform/external/sepolicy" groups="pdk" />
+  <project path="external/sepolicy" name="external_sepolicy" groups="pdk" remote="github" revision="frankie-mr-1"/>
   <project path="external/sfntly" name="platform/external/sfntly" groups="pdk-cw-fs,qcom_msm8x26" />
   <project path="external/skia" name="platform/external/skia" groups="pdk-cw-fs,qcom_msm8x26" />
   <project path="external/smack" name="platform/external/smack" groups="pdk-cw-fs" />
@@ -279,7 +287,7 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs" remote="github" revision="frankie-mr-1" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -394,7 +402,7 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="github" revision="frankie-mr-1" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
@@ -465,6 +473,7 @@
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-linaro-4.8" name="Toolchain" remote="linaro" revision="linaro-4.8-arm-linux-androideabi" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" groups="pdk,linux" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="pdk,linux" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" />
@@ -484,7 +493,7 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
+  <project path="system/core" name="platform_system_core" groups="pdk" remote="github" revision="frankie-mr-1" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
@@ -505,5 +514,7 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
+  <project path="vendor" name="proprietary_vendor" remote="github" revision="lollipop"/>
+  <project path="vendor/frank" name="vendor_frank" remote="github" revision="frankie-mr-1"/>
 
 </manifest>
