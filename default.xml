@@ -370,7 +370,7 @@
   <project path="ndk" name="platform/ndk" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" groups="pdk-cw-fs" />
-  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
+  <project path="packages/apps/Browser" name="platform_packages_apps_Browser" remote="github" revision="lollipop" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
   <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
@@ -384,7 +384,7 @@
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
-  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
+  <project path="packages/apps/Gallery2" name="platform_packages_apps_Gallery2" remote="github" revision="lollipop" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
   <project path="packages/apps/InCallUI" name="platform/packages/apps/InCallUI" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
