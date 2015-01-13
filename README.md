@@ -1,6 +1,6 @@
-Frankened
+Frank
 =================
-To get Frankened
+To get Frank
 
 repo init -u https://github.com/The-Ancile-Project/platform_manifest.git -b frankie-mr-1
 
@@ -10,19 +10,19 @@ source build/envsetup.sh
 
 Pick a device you want to build for
 
-lunch frankened_deb-userdebug
+lunch frank_n7_2013_lte-userdebug
 
-lunch frankened_flo-userdebug
+lunch frank_n7_2013_wifi-userdebug
 
-lunch frankened_grouper-userdebug
+lunch frank_n7_2012_wifi-userdebug
 
-lunch frankened_hammerhead-userdebug
+lunch frank_n5-userdebug
 
-lunch frankened_mako-userdebug
+lunch frank_n4-userdebug
 
-lunch frankened_manta-userdebug
+lunch frank_n10-userdebug
 
-lunch frankened_shamu-userdebug
+lunch frank_n6-userdebug
 
 then compile
 
